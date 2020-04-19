@@ -21,4 +21,11 @@ We will be building the frontend application for the voters using React.js.  The
 #### Phase 2: Post-voting Analysis
 - When the Analysis Phase is active, the app will show a graph of some sort (a bar char?) of how many votes were given to each candidate, and which candidate won the election.
 
-## Ethereum Backend
+## Ethereum Solidity Backend
+The backend election logic will be build using Solidity, most likely on the Rinkeby Ethereum Test Network.  The functionality of the backend is as follows:
+
+- store a list of the voters hashes and their associated votes.
+- a mechanism to verify that an incoming vote transaction is valid:
+  - the voter's authenticity is valid.
+  - the voter has not already voted.
+- a mechanism to either end the voting process after a given time, or end it when all voters have voted.
