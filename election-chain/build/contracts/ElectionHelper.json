@@ -1,0 +1,298 @@
+{
+  "contractName": "ElectionHelper",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "message",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "time",
+          "type": "uint256"
+        }
+      ],
+      "name": "CancelledEvent",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "STATE",
+      "outputs": [
+        {
+          "internalType": "enum Election.election_state",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "cancel_election",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "candidates",
+      "outputs": [
+        {
+          "internalType": "bytes25",
+          "name": "",
+          "type": "bytes25"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "election_EndDate",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "register",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "bytes25",
+          "name": "_cadidate",
+          "type": "bytes25"
+        }
+      ],
+      "name": "vote",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"message\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"CancelledEvent\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[],\"name\":\"STATE\",\"outputs\":[{\"internalType\":\"enum Election.election_state\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"cancel_election\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"candidates\",\"outputs\":[{\"internalType\":\"bytes25\",\"name\":\"\",\"type\":\"bytes25\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"election_EndDate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"register\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes25\",\"name\":\"_cadidate\",\"type\":\"bytes25\"}],\"name\":\"vote\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/gotbw/Desktop/New folder/ElectionChain/election-chain/contracts/electionhelper.sol\":\"ElectionHelper\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/gotbw/Desktop/New folder/ElectionChain/election-chain/contracts/election.sol\":{\"keccak256\":\"0x46ddb96dab358f0908d5f213626d5108ed5d08f75d3959adca7caf022539178a\",\"urls\":[\"bzz-raw://52e1b62d37eac3174185a5da827a1cc96be96a5d3e0576187d5ac1705fcf61a0\",\"dweb:/ipfs/QmeosDks63LzP9MkFFich4oLT13p2TjzuokVVRWkrSffCn\"]},\"/C/Users/gotbw/Desktop/New folder/ElectionChain/election-chain/contracts/electionhelper.sol\":{\"keccak256\":\"0xbddd314de755b6bf25c1f5b839a5a13809a7c94c6a6a27172ad20af0d1110d24\",\"urls\":[\"bzz-raw://8b1827cf191bd20c43d5500550e9f21a4aac1a9be79f1c6065225490edd64ef2\",\"dweb:/ipfs/QmeRWXkvMovbgtayWqyaJFJRhQcpX9zoz2rSfdpMPTBtfM\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610222806100206000396000f3fe608060405234801561001057600080fd5b50600436106100615760003560e01c806212bd29146100665780631aa3a008146100885780633477ee2e146100aa5780636789034c14610100578063c486456c1461011e578063d6cfa3b71461014a575b600080fd5b61006e61019a565b604051808215151515815260200191505060405180910390f35b61009061019f565b604051808215151515815260200191505060405180910390f35b6100d6600480360360208110156100c057600080fd5b81019080803590602001909291905050506101a4565b604051808266ffffffffffffff191666ffffffffffffff1916815260200191505060405180910390f35b6101086101cd565b6040518082815260200191505060405180910390f35b6101266101d3565b6040518082600181111561013657fe5b60ff16815260200191505060405180910390f35b6101806004803603602081101561016057600080fd5b81019080803566ffffffffffffff191690602001909291905050506101e6565b604051808215151515815260200191505060405180910390f35b600090565b600090565b600281815481106101b157fe5b906000526020600020016000915054906101000a900460381b81565b60015481565b600660009054906101000a900460ff1681565b600091905056fea265627a7a7231582005d9dc6ca7612933cc32fdf7f4f5887dbff5740daed16748affdfd214effea6c64736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100615760003560e01c806212bd29146100665780631aa3a008146100885780633477ee2e146100aa5780636789034c14610100578063c486456c1461011e578063d6cfa3b71461014a575b600080fd5b61006e61019a565b604051808215151515815260200191505060405180910390f35b61009061019f565b604051808215151515815260200191505060405180910390f35b6100d6600480360360208110156100c057600080fd5b81019080803590602001909291905050506101a4565b604051808266ffffffffffffff191666ffffffffffffff1916815260200191505060405180910390f35b6101086101cd565b6040518082815260200191505060405180910390f35b6101266101d3565b6040518082600181111561013657fe5b60ff16815260200191505060405180910390f35b6101806004803603602081101561016057600080fd5b81019080803566ffffffffffffff191690602001909291905050506101e6565b604051808215151515815260200191505060405180910390f35b600090565b600090565b600281815481106101b157fe5b906000526020600020016000915054906101000a900460381b81565b60015481565b600660009054906101000a900460ff1681565b600091905056fea265627a7a7231582005d9dc6ca7612933cc32fdf7f4f5887dbff5740daed16748affdfd214effea6c64736f6c63430005100032",
+  "sourceMap": "63:42:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;63:42:2;;;;;;;",
+  "deployedSourceMap": "63:42:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;63:42:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1480:51:1;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1375:43;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;251:27;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;251:27:1;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;87:31;;;:::i;:::-;;;;;;;;;;;;;;;;;;;631:27;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1421:56;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1421:56:1;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1480:51;1524:4;1480:51;:::o;1375:43::-;1411:4;1375:43;:::o;251:27::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;87:31::-;;;;:::o;631:27::-;;;;;;;;;;;;;:::o;1421:56::-;1470:4;1421:56;;;:::o",
+  "source": "pragma solidity >=0.5.0 <0.6.0;\r\n\r\nimport \"./election.sol\";\r\n\r\ncontract ElectionHelper is Election {\r\n\r\n}",
+  "sourcePath": "C:\\Users\\gotbw\\Desktop\\New folder\\ElectionChain\\election-chain\\contracts\\electionhelper.sol",
+  "ast": {
+    "absolutePath": "/C/Users/gotbw/Desktop/New folder/ElectionChain/election-chain/contracts/electionhelper.sol",
+    "exportedSymbols": {
+      "ElectionHelper": [
+        448
+      ]
+    },
+    "id": 449,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 444,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:31:2"
+      },
+      {
+        "absolutePath": "/C/Users/gotbw/Desktop/New folder/ElectionChain/election-chain/contracts/election.sol",
+        "file": "./election.sol",
+        "id": 445,
+        "nodeType": "ImportDirective",
+        "scope": 449,
+        "sourceUnit": 443,
+        "src": "35:24:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 446,
+              "name": "Election",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 180,
+              "src": "90:8:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Election_$180",
+                "typeString": "contract Election"
+              }
+            },
+            "id": 447,
+            "nodeType": "InheritanceSpecifier",
+            "src": "90:8:2"
+          }
+        ],
+        "contractDependencies": [
+          180
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 448,
+        "linearizedBaseContracts": [
+          448,
+          180
+        ],
+        "name": "ElectionHelper",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 449,
+        "src": "63:42:2"
+      }
+    ],
+    "src": "0:105:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/gotbw/Desktop/New folder/ElectionChain/election-chain/contracts/electionhelper.sol",
+    "exportedSymbols": {
+      "ElectionHelper": [
+        448
+      ]
+    },
+    "id": 449,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 444,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:31:2"
+      },
+      {
+        "absolutePath": "/C/Users/gotbw/Desktop/New folder/ElectionChain/election-chain/contracts/election.sol",
+        "file": "./election.sol",
+        "id": 445,
+        "nodeType": "ImportDirective",
+        "scope": 449,
+        "sourceUnit": 443,
+        "src": "35:24:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 446,
+              "name": "Election",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 180,
+              "src": "90:8:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Election_$180",
+                "typeString": "contract Election"
+              }
+            },
+            "id": 447,
+            "nodeType": "InheritanceSpecifier",
+            "src": "90:8:2"
+          }
+        ],
+        "contractDependencies": [
+          180
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 448,
+        "linearizedBaseContracts": [
+          448,
+          180
+        ],
+        "name": "ElectionHelper",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 449,
+        "src": "63:42:2"
+      }
+    ],
+    "src": "0:105:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2020-05-03T23:39:10.668Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
