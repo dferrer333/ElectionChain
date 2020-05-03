@@ -16,11 +16,11 @@ contract Election {
 	bytes25[] public candidates;
 
 	//mapping from candidate name to their number of votes
-	mapping(bytes25 => uint256) public votes_byCandidate;
+	mapping(bytes25 => uint256) internal votes_byCandidate;
 	//mapping that returns true if the address is registered
-	mapping(address => bool) public registered_voters;
+	mapping(address => bool) internal registered_voters;
 	//mapping that returns true if the address still has a vote to cast
-	mapping(address => bool) public can_vote;
+	mapping(address => bool) internal can_vote;
 
 	election_state public STATE;
 
