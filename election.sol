@@ -68,11 +68,10 @@ contract MyElection is Election {
 	function () external {
 	}
 
-	constructor (uint _electionEndDate, address _owner, bytes25[] memory _candidates) public {
+	constructor (uint _electionEnd, address _owner) public {
 		election_owner = _owner;
-		election_EndDate = _electionEndDate;
+		election_EndDate = now + _electionEnd * 1 hours;
 		STATE = election_state.STARTED;
-		candidates = _candidates;
 	}
 
 	function register() public not_registered returns (bool){
@@ -89,7 +88,7 @@ contract MyElection is Election {
 		return true;
 	}
 
-	function add_candidate(bytes25 _candidate) external only_owner returns(bool){
+	function add_candidate(bytes25 _candidate) public only_owner returns(bool){
 		bool already_added = false;
 		for(uint i=0; i<candidates.length; i++) {
 			if (_candidate == candidates[i]) {
