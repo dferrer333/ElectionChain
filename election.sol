@@ -13,10 +13,10 @@ contract Election {
 	//
 	//2-D arrays are not a thing, I forgot and we need to fix this
 	//
-	string[] storage candidates;
+	byte[25][] storage candidates;
 
 	//mapping from candidate name to their number of votes
-	mapping(string => uint256) private votes_byCandidate;
+	mapping(byte[25] => uint256) private votes_byCandidate;
 	//mapping that returns true if the address is registered
 	mapping(address => bool) private registered_voters;
 	//mapping that returns true if the address still has a vote to cast
@@ -49,6 +49,11 @@ contract Election {
 		_;
 	}
 
+	modifier not_registered(){
+		require(registered_voters[msg.sender] == false, "You are already registered");
+		_;
+	}
+
 	function register() public returns (bool){}
 	function vote() public returns (bool){}
 	function cancel_election() external returns(bool){}
@@ -63,33 +68,49 @@ contract MyElection is Election {
 	function () external {
 	}
 
-	constructor (uint _electionEndDate, address _owner, string[] memory _candidates) public {
+	constructor (uint _electionEndDate, address _owner, byte[25][] memory _candidates) public {
 		election_owner = _owner;
 		election_EndDate = _electionEndDate;
 		STATE = election_state.STARTED;
 		candidates = _candidates;
 	}
 
-	function register() public returns (bool){
+	function register() public not_registered returns (bool){
 		registered_voters[msg.sender] = true;
 		can_vote[msg.sender] = true;
 
 		return true;
 	}
 
-	function vote(string memory _candidate) public only_registered_voter can_still_vote returns (bool){
+	function vote(byte[25] memory _candidate) public only_registered_voter can_still_vote returns (bool){
 		votes_byCandidate[_candidate] += 1;
 		can_vote[msg.sender] = false;
 		
 		return true;
 	}
 
-	function show_FinalVotes() external view election_ended returns (string[], uint256[]){
+	function add_candidate(byte[25] memory _candidate) external only_owner returns(bool){
+		bool already_added = false;
+		for(uint i=0; i<candidates.length; i++) {
+			if (_candidate == candidates[i]) {
+				already_added = true;
+			}
+		}
+		if (already_added) { return false;}
+		candidates.push(_candidate);
+		return true;
+	}
+
+	function get_candidates() external view returns (byte[25][]){
+		return candidates;
+	}
+
+	function get_FinalVotes() external view election_ended returns (byte[25][], uint256[]){
 		uint256[] memory votes = new uint256[]();
 		for(uint i=0; i<candidates.length; i++) {
 			votes.push(votes_byCandidate[candidates[i]]);
 		}
-		return candidates, votes;
+		return (candidates, votes);
 	}
 
 	function cancel_election() external only_owner ongoing_election returns (bool){
