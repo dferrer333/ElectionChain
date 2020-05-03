@@ -55,7 +55,7 @@ contract Election {
 	}
 
 	function register() public returns (bool){}
-	function vote() public returns (bool){}
+	function vote(bytes25 _cadidate) public returns (bool){}
 	function cancel_election() external returns(bool){}
 
 	event CancelledEvent(string message, uint256 time);
@@ -72,6 +72,7 @@ contract MyElection is Election {
 		election_owner = _owner;
 		election_EndDate = now + _electionEnd * 1 hours;
 		STATE = election_state.STARTED;
+		candidates = [bytes25("Donald Trump"), bytes25("Joe Biden"), bytes25("Bernie Sanders")];
 	}
 
 	function register() public not_registered returns (bool){
@@ -95,7 +96,7 @@ contract MyElection is Election {
 				already_added = true;
 			}
 		}
-		if (already_added) { return false;}
+		require(!already_added, "This candidate has already been added");
 		candidates.push(_candidate);
 		return true;
 	}
@@ -118,6 +119,13 @@ contract MyElection is Election {
 		election_EndDate = now;
 		emit CancelledEvent("Election cancelled", now);
 		return true;
+	}
+	
+	function destruct_election() external only_owner returns (bool){
+	    require(now >= election_EndDate, "You can't destruct the contract, The election is still going");
+	    address payable _election_owner = address(uint160(election_owner));
+	    selfdestruct(_election_owner);
+	    return true;
 	}
 
 }
