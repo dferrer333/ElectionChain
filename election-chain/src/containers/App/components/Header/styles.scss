@@ -1,0 +1,12 @@
+:local(.styles) {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+}
+
+.top {
+  margin: 0 auto;
+  text-align: center;
+  justify-content: space-between;
+}
