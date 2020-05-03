@@ -13,14 +13,14 @@ contract Election {
 	//
 	//2-D arrays are not a thing, I forgot and we need to fix this
 	//
-	byte[25][] storage candidates;
+	bytes25[] public candidates;
 
 	//mapping from candidate name to their number of votes
-	mapping(byte[25] => uint256) private votes_byCandidate;
+	mapping(bytes25 => uint256) public votes_byCandidate;
 	//mapping that returns true if the address is registered
-	mapping(address => bool) private registered_voters;
+	mapping(address => bool) public registered_voters;
 	//mapping that returns true if the address still has a vote to cast
-	mapping(address => bool) private can_vote;
+	mapping(address => bool) public can_vote;
 
 	election_state public STATE;
 
@@ -35,7 +35,7 @@ contract Election {
 	}
 
 	modifier only_owner(){
-		require(msg.sender==auction_owner);
+		require(msg.sender == election_owner);
 		_;
 	}
 
@@ -68,7 +68,7 @@ contract MyElection is Election {
 	function () external {
 	}
 
-	constructor (uint _electionEndDate, address _owner, byte[25][] memory _candidates) public {
+	constructor (uint _electionEndDate, address _owner, bytes25[] memory _candidates) public {
 		election_owner = _owner;
 		election_EndDate = _electionEndDate;
 		STATE = election_state.STARTED;
@@ -82,14 +82,14 @@ contract MyElection is Election {
 		return true;
 	}
 
-	function vote(byte[25] memory _candidate) public only_registered_voter can_still_vote returns (bool){
+	function vote(bytes25 _candidate) public only_registered_voter can_still_vote returns (bool){
 		votes_byCandidate[_candidate] += 1;
 		can_vote[msg.sender] = false;
 		
 		return true;
 	}
 
-	function add_candidate(byte[25] memory _candidate) external only_owner returns(bool){
+	function add_candidate(bytes25 _candidate) external only_owner returns(bool){
 		bool already_added = false;
 		for(uint i=0; i<candidates.length; i++) {
 			if (_candidate == candidates[i]) {
@@ -101,15 +101,16 @@ contract MyElection is Election {
 		return true;
 	}
 
-	function get_candidates() external view returns (byte[25][]){
+	function get_candidates() external view returns (bytes25[] memory){
 		return candidates;
 	}
 
-	function get_FinalVotes() external view election_ended returns (byte[25][], uint256[]){
-		uint256[] memory votes = new uint256[]();
+	function get_FinalVotes() external view election_ended returns (bytes25[] memory, uint256[] memory){
+		uint256[] memory votes = new uint256[](candidates.length);
 		for(uint i=0; i<candidates.length; i++) {
-			votes.push(votes_byCandidate[candidates[i]]);
+			votes[i] = votes_byCandidate[candidates[i]];
 		}
+		// returns both the list of candidates and the votes for each candidate in order
 		return (candidates, votes);
 	}
 
