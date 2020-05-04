@@ -1,4 +1,4 @@
-pragma solidity ^0.5.16;
+pragma solidity >=0.5.0 <0.7.0;
 
 contract Election {
 
@@ -65,8 +65,7 @@ contract Election {
 
 contract MyElection is Election {
 
-	function () external {
-	}
+	function () external payable {}
 
 	constructor (uint _electionEnd, address _owner) public {
 		election_owner = _owner;
