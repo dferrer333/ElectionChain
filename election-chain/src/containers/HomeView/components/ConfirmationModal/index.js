@@ -6,11 +6,11 @@ import DialogActions from "@material-ui/core/DialogActions";
 import Button from "@material-ui/core/Button";
 import { styles } from "./styles.scss";
 
-function ConfirmationModal({ chosenCandidate }) {
-  const [open, setOpen] = React.useState(false);
+function ConfirmationModal({ chosenCandidate, open, setOpen }) {
+  
   return (
     <Dialog
-      onClose={setOpen(false)}
+      onClose={() => setOpen(false)}
       open={open}
       maxWidth={false}
       aria-labelledby="confirmation-dialog-title"
@@ -22,7 +22,7 @@ function ConfirmationModal({ chosenCandidate }) {
         </DialogTitle>
         <DialogContent>{`Are you sure you want to vote for ${chosenCandidate}?`}</DialogContent>
         <DialogActions>
-          <Button color="primary" onClick={setOpen(false)} variant="contained">
+          <Button color="primary" onClick={() => setOpen(false)} variant="contained">
             Cancel
           </Button>
           <Button
