@@ -199,7 +199,7 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"message\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"CancelledEvent\",\"type\":\"event\"},{\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"constant\":true,\"inputs\":[],\"name\":\"STATE\",\"outputs\":[{\"internalType\":\"enum Election.election_state\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes25\",\"name\":\"_candidate\",\"type\":\"bytes25\"}],\"name\":\"add_candidate\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"cancel_election\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"candidates\",\"outputs\":[{\"internalType\":\"bytes25\",\"name\":\"\",\"type\":\"bytes25\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"destruct_election\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"election_EndDate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"get_FinalVotes\",\"outputs\":[{\"internalType\":\"bytes25[]\",\"name\":\"\",\"type\":\"bytes25[]\"},{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"get_candidates\",\"outputs\":[{\"internalType\":\"bytes25[]\",\"name\":\"\",\"type\":\"bytes25[]\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"register\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes25\",\"name\":\"_candidate\",\"type\":\"bytes25\"}],\"name\":\"vote\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/GotBw/Desktop/New folder/ElectionChain/election-chain/contracts/electionhelper.sol\":\"ElectionHelper\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/GotBw/Desktop/New folder/ElectionChain/election-chain/contracts/election.sol\":{\"keccak256\":\"0xb8123ea18148dfe9ba722243698f001664c16289dcaa53e6972174a9e61cba6b\",\"urls\":[\"bzz-raw://0be6df2fa4f08bbf56abd2531e9d7e1416771536462dfddf62556bc2a79a692d\",\"dweb:/ipfs/QmZQvQAe8G3XLit5u9G8WdpCZs5acW13qtZQUfxBEHWH9f\"]},\"/C/Users/GotBw/Desktop/New folder/ElectionChain/election-chain/contracts/electionhelper.sol\":{\"keccak256\":\"0x4dd45cd1f75c8af6ca82dd26bfe143a2e4a0c6279e243ea7b2a054aa502f6304\",\"urls\":[\"bzz-raw://f8e25962574f61eeae630150ad97db00d8481d389114b056cd7a0bf9e94fe93f\",\"dweb:/ipfs/QmUJ3tPMA9AJuczBPpZ2SM17ZYHfBh4jMCN6KaHhAszbwM\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"message\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"time\",\"type\":\"uint256\"}],\"name\":\"CancelledEvent\",\"type\":\"event\"},{\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"constant\":true,\"inputs\":[],\"name\":\"STATE\",\"outputs\":[{\"internalType\":\"enum Election.election_state\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes25\",\"name\":\"_candidate\",\"type\":\"bytes25\"}],\"name\":\"add_candidate\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"cancel_election\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"candidates\",\"outputs\":[{\"internalType\":\"bytes25\",\"name\":\"\",\"type\":\"bytes25\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"destruct_election\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"election_EndDate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"get_FinalVotes\",\"outputs\":[{\"internalType\":\"bytes25[]\",\"name\":\"\",\"type\":\"bytes25[]\"},{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"get_candidates\",\"outputs\":[{\"internalType\":\"bytes25[]\",\"name\":\"\",\"type\":\"bytes25[]\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"register\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes25\",\"name\":\"_candidate\",\"type\":\"bytes25\"}],\"name\":\"vote\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/GotBw/Desktop/New folder/ElectionChain/election-chain/contracts/electionhelper.sol\":\"ElectionHelper\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/GotBw/Desktop/New folder/ElectionChain/election-chain/contracts/election.sol\":{\"keccak256\":\"0xc9d3165fb188d75ca20a513d2fbf11855adba68b19333a69962ae397c2549483\",\"urls\":[\"bzz-raw://d21ba8924deedc0766e622d2f597c8a01621c545a1588d0e259f26618b69fd86\",\"dweb:/ipfs/QmdXeN8r72tUJCyAN2B8TzapD8xdP6Nz55LMjhW5E4dvqc\"]},\"/C/Users/GotBw/Desktop/New folder/ElectionChain/election-chain/contracts/electionhelper.sol\":{\"keccak256\":\"0x4dd45cd1f75c8af6ca82dd26bfe143a2e4a0c6279e243ea7b2a054aa502f6304\",\"urls\":[\"bzz-raw://f8e25962574f61eeae630150ad97db00d8481d389114b056cd7a0bf9e94fe93f\",\"dweb:/ipfs/QmUJ3tPMA9AJuczBPpZ2SM17ZYHfBh4jMCN6KaHhAszbwM\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
@@ -210,14 +210,14 @@
     "absolutePath": "/C/Users/GotBw/Desktop/New folder/ElectionChain/election-chain/contracts/electionhelper.sol",
     "exportedSymbols": {
       "ElectionHelper": [
-        448
+        445
       ]
     },
-    "id": 449,
+    "id": 446,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 444,
+        "id": 441,
         "literals": [
           "solidity",
           ">=",
@@ -233,10 +233,10 @@
       {
         "absolutePath": "/C/Users/GotBw/Desktop/New folder/ElectionChain/election-chain/contracts/election.sol",
         "file": "./election.sol",
-        "id": 445,
+        "id": 442,
         "nodeType": "ImportDirective",
-        "scope": 449,
-        "sourceUnit": 443,
+        "scope": 446,
+        "sourceUnit": 440,
         "src": "35:24:2",
         "symbolAliases": [],
         "unitAlias": ""
@@ -247,38 +247,38 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 446,
+              "id": 443,
               "name": "MyElection",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 442,
+              "referencedDeclaration": 439,
               "src": "90:10:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_MyElection_$442",
+                "typeIdentifier": "t_contract$_MyElection_$439",
                 "typeString": "contract MyElection"
               }
             },
-            "id": 447,
+            "id": 444,
             "nodeType": "InheritanceSpecifier",
             "src": "90:10:2"
           }
         ],
         "contractDependencies": [
-          180,
-          442
+          181,
+          439
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 448,
+        "id": 445,
         "linearizedBaseContracts": [
-          448,
-          442,
-          180
+          445,
+          439,
+          181
         ],
         "name": "ElectionHelper",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 449,
+        "scope": 446,
         "src": "63:44:2"
       }
     ],
@@ -288,14 +288,14 @@
     "absolutePath": "/C/Users/GotBw/Desktop/New folder/ElectionChain/election-chain/contracts/electionhelper.sol",
     "exportedSymbols": {
       "ElectionHelper": [
-        448
+        445
       ]
     },
-    "id": 449,
+    "id": 446,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 444,
+        "id": 441,
         "literals": [
           "solidity",
           ">=",
@@ -311,10 +311,10 @@
       {
         "absolutePath": "/C/Users/GotBw/Desktop/New folder/ElectionChain/election-chain/contracts/election.sol",
         "file": "./election.sol",
-        "id": 445,
+        "id": 442,
         "nodeType": "ImportDirective",
-        "scope": 449,
-        "sourceUnit": 443,
+        "scope": 446,
+        "sourceUnit": 440,
         "src": "35:24:2",
         "symbolAliases": [],
         "unitAlias": ""
@@ -325,38 +325,38 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 446,
+              "id": 443,
               "name": "MyElection",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 442,
+              "referencedDeclaration": 439,
               "src": "90:10:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_MyElection_$442",
+                "typeIdentifier": "t_contract$_MyElection_$439",
                 "typeString": "contract MyElection"
               }
             },
-            "id": 447,
+            "id": 444,
             "nodeType": "InheritanceSpecifier",
             "src": "90:10:2"
           }
         ],
         "contractDependencies": [
-          180,
-          442
+          181,
+          439
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 448,
+        "id": 445,
         "linearizedBaseContracts": [
-          448,
-          442,
-          180
+          445,
+          439,
+          181
         ],
         "name": "ElectionHelper",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 449,
+        "scope": 446,
         "src": "63:44:2"
       }
     ],
@@ -395,7 +395,7 @@
     }
   },
   "schemaVersion": "3.1.0",
-  "updatedAt": "2020-05-04T03:37:01.665Z",
+  "updatedAt": "2020-05-04T03:58:57.960Z",
   "devdoc": {
     "methods": {}
   },
